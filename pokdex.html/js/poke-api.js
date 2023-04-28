@@ -1,30 +1,31 @@
 
 const pokeApi = {}
 
-function convertPokeApiDetailtoPokemon(pokeDetail) {
+function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.order
     pokemon.name = pokeDetail.name
 
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
-    const [type] = Types
+    const type = types
 
     pokemon.types = types
     pokemon.type = type
 
-    pokemon.photo = pokeDetail.sprites.other.dream_word.front_default
+    pokemon.photo = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.number}.svg`
+    pokeDetail.order
 
     return pokemon
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
-    return fetch(pokemon.url).then((response) => response.json())
+    return fetch(pokemon.url)
         .then((response) => response.json())
-        .then(convertPokeApiDetailtoPokemon)
+        .then(convertPokeApiDetailToPokemon)
 }
 
-pokeApi.getPokemons = (offset = 0, limit = 5) => {
+pokeApi.getPokemons = (offset = 0, limit = 4) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
     
     return fetch(url)
