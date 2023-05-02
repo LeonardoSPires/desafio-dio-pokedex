@@ -4,22 +4,25 @@
 }
 
 body {
-    background-color: rgba(242, 235, 235, 0.578);
+    background-color: #f6f8fc;
 }
 
+
 .content {
-    width: 100vw;
+    margin: 10px 50px 20px 50px;
     height: 100vh;
     padding: 1rem;
-    background-color: white;
-    
+    background-color: #fff;
+    border-radius: 10px;
 }
+
 
 @media screen and (min-width: 392px) {
     content {
       max-width: 392px;
       height: auto;
       margin: 1rem auto;
+      border-radius: 1rem;
     }
 }
 
