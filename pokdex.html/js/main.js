@@ -15,7 +15,7 @@ function loadPokemonItens(offset, limit) {
             <div class="detail">
                 <ol class="types">
                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-            </ol>
+                </ol>
     
             <img src="${pokemon.photo}"
                 alt="${pokemon.name}"
