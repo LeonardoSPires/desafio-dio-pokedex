@@ -11,22 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Roboto:ital,wght@0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
 
-
+    <!-- link css-->
     <link rel="stylesheet" href="desafioPoke.css">
+
 </head>
 <body>
     <section class="content" >
        
-        <li class="pokemon"> 
+        <div id="pokemonDetalhe" class="pokemons"> 
             <Span class="nomePoke">Bulbasaur</Span>
             <span class="numeroPok">#001</span>
-            <div>
-                <button class="type">Grass</button>
-                <button class="type">Poison</button>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasour">     
-                   
+            <div class="typePoke" >
+                <span class="type">Grass</span>
+                <span class="type">Poison</span>
+                <img id="img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasour">     
             </div>   
-        </li>
+        </div> 
+        
         <div class="especifica">
             <span class="about">About</span>
             <div class="detalPoke">
@@ -55,7 +56,7 @@
                 </ol>
                 <ol class="resPoke">
                     <li>87,5% / 12.5% </li>
-                    <li>Monster </li> 
+                    <li>Monster</li> 
                     <li>Grass</li>
                     
                 </ol>
@@ -63,10 +64,13 @@
             </div>
             
         </div>
-            
-
+            <span id="mensagem"></span>
+            <button type="button" onclick="document.getElementById('mensagem').style.display='none'">
+                voltar</button>
     </section>
 
-<script src="desafioPoke"></script>    
+<script src="pokemonClass.js"></script>
+<script src="pokeApi.js"></script> 
+<script src="main.js"></script>   
 </body>
 </html>
